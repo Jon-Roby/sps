@@ -4,6 +4,35 @@ import { bindActionCreators } from 'redux';
 
 import { getLoginStatus } from '../actions/index';
 
+import AppBar from 'material-ui/lib/app-bar';
+import IconButton from 'material-ui/lib/icon-button';
+import NavigationClose from 'material-ui/lib/svg-icons/navigation/close';
+import IconMenu from 'material-ui/lib/menus/icon-menu';
+import MoreVertIcon from 'material-ui/lib/svg-icons/navigation/more-vert';
+import MenuItem from 'material-ui/lib/menus/menu-item';
+
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+injectTapEventPlugin();
+
+
+
+// .list-display-row {
+//   list-style-type: none;
+//   margin: 0;
+//   padding: 0;
+//   overflow: hidden;
+//
+//   li {
+//     float: left;
+//     a {
+//       display: block;
+//       text-align: center;
+//       text-decoration: none;
+//     }
+//   }
+// }
+
 class FacebookLogin extends Component {
   constructor(props) {
     super(props);
@@ -38,13 +67,50 @@ class FacebookLogin extends Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.checkLoginState.bind(this)}>LOGIN IN TO FACEBOOK</button>
-        <div id="status">STATUS {this.state.status}</div>
+      <div id="nav">
+        <div><img width="230" height="33" src="http://www.printstagr.am/popup/logo_horiz-01.png" /></div>
+        <div><button onClick={this.checkLoginState.bind(this)}>LOGIN IN TO FACEBOOK</button></div>
       </div>
     );
   }
 }
+
+// <img width="230" height="33" src="http://www.printstagr.am/popup/logo_horiz-01.png" />
+// <AppBar
+//   title="Social Print"
+//
+//   iconElementRight={
+//     <IconMenu
+//       iconButtonElement={
+//
+//         <button onClick={this.checkLoginState.bind(this)}>LOGIN IN TO FACEBOOK</button>
+//
+//       }
+//       targetOrigin={{horizontal: 'right', vertical: 'top'}}
+//       anchorOrigin={{horizontal: 'right', vertical: 'top'}}
+//     >
+//       <MenuItem primaryText="Refresh" />
+//       <MenuItem primaryText="Help" />
+//       <MenuItem primaryText="Sign out" />
+//     </IconMenu>
+//   }
+// />
+
+// .list-display-row {
+//   list-style-type: none;
+//   margin: 0;
+//   padding: 0;
+//   overflow: hidden;
+//
+//   li {
+//     float: left;
+//     a {
+//       display: block;
+//       text-align: center;
+//       text-decoration: none;
+//     }
+//   }
+// }
 
 // function mapStateToProps(state) {
 //   // this is from reducer/index.js

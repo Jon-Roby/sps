@@ -2,3 +2,19 @@ h1 {
   font-family: helvetica;
   font-weight: 200;
 }
+
+body {
+  background-color: red;
+}
+
+#nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+
+  
+}

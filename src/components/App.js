@@ -22,10 +22,9 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        Hello
-        // <FacebookLogin />
-        // <AlbumList />
-        // <AlbumPhotos />
+        <FacebookLogin />
+        <AlbumList />
+        <AlbumPhotos />
       </div>
     );
   }
